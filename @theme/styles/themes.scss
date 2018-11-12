@@ -1,0 +1,149 @@
+// @nebular theming framework
+@import '~@nebular/theme/styles/theming';
+// @nebular out of the box themes
+@import '~@nebular/theme/styles/themes';
+
+// which themes you what to enable (empty to enable all)
+$nb-enabled-themes: (default, cosmic);
+
+$nb-themes: nb-register-theme((
+ // app wise variables for each theme
+   sidebar-header-gap: 0rem,
+   sidebar-header-height: initial,
+   layout-content-width: 1400px,
+
+   font-main: Roboto,
+   font-secondary: Exo,
+  
+   //layout-padding: 0rem 0rem 0rem,
+   //layout-medium-padding: 0rem 0rem 0rem,
+   //layout-small-padding: 0rem 0rem 0rem,
+   color-wizly: #04f8fc,
+   //color-fg: #000000,
+   //color-fg: #fff,
+   color-fg-white: #ffffff,
+   //color-fg-heading: #000000,
+   color-fg-heading: #fff,
+   linear-gradient: linear-gradient(to bottom, #00007f,#3123bd,#000080) !important,
+   color-success:rgb(102,255,102),
+   color-info: rgb(0,253,253),
+   color-warning: rgb(255,192,0),  
+   color-danger: rgb(255,0,102),
+   //header-height: 2.2rem,
+   menu-submenu-active-fg: #05f9fc,
+   menu-item-separator: transparent,
+   tabs-selected: color-wizly,
+   route-tabs-selected: color-wizly,
+
+   //popover-fg: #000,
+   //popover-bg: #fff,
+   //popover-border: color-wizly
+//color-fg-highlight: red,
+  
+), default, default);
+
+$nb-themes: nb-register-theme((
+// app wise variables for each theme
+   sidebar-header-gap: 0rem,
+   sidebar-header-height: initial,
+   layout-content-width: 1400px,
+
+   layout-padding: 0rem 0rem 0rem,
+   layout-medium-padding: 0rem 0rem 0rem,
+   layout-small-padding: 0rem 0rem 0rem,
+   
+   font-main: Roboto,
+   font-secondary: Exo,
+  
+   separator: #00007F,
+  
+   color-wizly: #04f8fc,
+   color-bg: #00007f,
+   header-height: 2.5rem,
+   color-fg: #fff,
+   color-fg-white: #fff,
+   color-fg-heading: #fff,
+   color-fg-text: black,
+   color-fg-highlight: white,
+// shadow: transparent,
+   layout-bg: transparent,
+// linear-gradient-wizly: linear-gradient(to bottom, #00007f,#3123bd,#000080) !important,
+// linear-gradient-wizly: linear-gradient(to bottom, rgba(0, 0, 127, 0.7), rgba(49, 35, 189, 0.7), rgba(0, 0, 128, 0.7)) !important,
+   linear-gradient-wizly: rgba(0, 0, 127, 0.4),
+   sidebar-bg: rgba(0,0,0,0),//rgba(0,0,0,0.6),//linear-gradient-wizly,
+   header-bg: linear-gradient(180deg,#00007f,#3123bd,#00007F),//linear-gradient-wizly,
+   actions-fg: color-fg-white,
+   menu-fg: color-fg-white,
+   menu-bg: transparent,
+   //menu-active-bg: linear-gradient(180deg,#00007f,#3123bd,#00007F),
+   menu-submenu-fg: color-fg-white,
+   menu-submenu-active-bg: #850606,
+   menu-submenu-active-fg: color-fg-white,
+   menu-submenu-active-border-color: transparent,
+   form-control-bg: color-fg-white,
+   checkbox-fg: color-fg,
+   checkbox-border-color: color-fg,
+   checkbox-checked-border-color: color-wizly,
+   checkbox-disabled-border-color: color-wizly,
+   checkbox-disabled-checkmark: color-fg-heading,
+   checkbox-border-size: 1px,
+
+   radio-fg: color-wizly,
+  
+// search-bg: linear-gradient(to bottom, #00007f,#3123bd,#000080) !important,
+   search-bg: linear-gradient-wizly,
+   search-btn-open-fg: color-fg-white,
+   search-text:  color-fg-white,
+   search-dash: color-fg-white,
+   search-placeholder:  color-fg-white,
+   menu-icon-color: color-fg-white,
+ 
+   menu-icon-active-color: color-fg-white,
+   menu-submenu-hover-fg: color-wizly,
+ 
+   user-size-small: .5rem,
+   user-size-medium: 1.5rem,
+   user-size-large: 2.25rem,
+
+   //card-bg:rgba(0,0,0,0.6),
+   card-bg:rgba(0,0,0,0),
+   card-fg-text:white,
+   sidebar-shadow: transparent,
+   header-shadow: transparent,
+   card-shadow: 0 8px 20px 0 rgba(0,0,0, 0.6),	
+   card-border-radius: 0px,
+   card-separator:#fff,
+   card-padding:1rem, //causes horizontal scroll bar to appear
+   card-margin: 0rem,
+   
+   form-control-border-color: color-wizly,
+   form-control-selected-border-color: color-wizly,
+   form-control-border-width: 1px,
+
+   btn-success-bg:color-wizly,
+   link-color: color-wizly,
+   link-color-hover: color-wizly,
+   
+   scrollbar-fg: #fff,
+	
+   //modal-bg: linear-gradient(#00007f,#4d5259),//rgba(0,128,128,0.8),//linear-gradient(180deg,#00007f,#3123bd,#00007F),
+   modal-padding: 0.2rem,
+   scrollbar-bg:#595959,
+   modal-header-font-size:0.9rem,
+   modal-separator:#fff,
+   
+   toaster-info:rgba(4,248,252,0.8),
+   toaster-success:rgba(66, 244, 72,0.8),
+   toaster-warning:rgba(255, 161, 0, 0.8),
+   toaster-error:rgba(255,0,0, 0.8),
+   
+   popover-fg: #000,
+   popover-bg: #fff,
+   popover-border: color-wizly,
+   
+   tabs-separator:#fff,
+   tabs-padding: 0.25rem,
+   route-tabs-separator: #fff,
+   route-tabs-padding: 1rem,
+), cosmic, cosmic);
+

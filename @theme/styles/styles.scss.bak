@@ -1,0 +1,243 @@
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+@import 'analytics';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+
+// loading progress bar theme
+@import './pace.theme';
+
+@import './bootstrap-rtl';
+
+@import '~angular-tree-component/dist/angular-tree-component.css';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  // fixed in rc.9 and can be removed after upgrade
+  .custom-control .custom-control-indicator {
+    border-radius: 50%; // TODO: quickfix for https://github.com/akveo/nebular/issues/275
+  }
+  @include bootstrap-rtl();
+
+/* toasters - start */
+  
+$toaster-text-color: #ffffff !default;  
+  
+#toast-container > div {
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 300px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 20px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: 0 0 12px #999999;
+  -webkit-box-shadow: 0 0 12px #999999;
+  box-shadow: 0 0 12px #999999;
+  color: $toaster-text-color;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+}  
+
+/* toasters - end */
+
+/* user profile pic - start */
+
+.userpic:hover .change-userpic, .userpic:hover i, a.sn-link, a.sn-link.connected em {
+    display: block;
+}
+
+.userpic a.change-userpic {
+    display: none;
+    width: 202px;
+    background: rgba(0,0,0,.7);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    line-height: 32px;
+    text-align: center;
+}
+
+/* user profile pic - end */
+
+/* Can be used where icon needs to be placed inside a button - start */
+.input-with-button {
+background-color:transparent;
+color:#fff;
+border-color:#fff;
+border-width:1px;
+}
+
+.input-with-button:focus,
+.input-with-button:active:focus{
+    outline:none !important;
+	box-shadow: none;
+}
+
+/* .input-with-button :hover { */
+/* color:#00007F; */
+/* } */
+
+/* Can be used where icon needs to be placed inside a button - end */
+
+/* fc buttn  - start */
+.fc-button:focus,
+.fc-button:active:focus{
+    outline:none !important;
+	box-shadow: none;
+}
+/* fc buttn  - end */
+
+/* .layout-container{ */
+/* background-image:url("/assets/images/wizly_background.gif"); */
+/* background-size:cover; */
+/* background-attachment: fixed; */
+/* } */
+
+.layout-container{
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url("/assets/images/wizly_background.gif");
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+.btn.btn-sm
+{
+	color:#fff;
+	background-color:transparent;
+	padding:0.25rem;
+}
+/* .btn.btn-sm:hover */
+/* { */
+	/* background-color:grey; */
+/* } */
+
+};
+
+.btn-sm:focus,
+.btn-sm:active:focus{
+    outline:none !important;
+	box-shadow: none;
+}
+
+.slider::before{
+	background-color: #fff !important;
+	background-image: none !important;
+	}
+	
+.form-control{
+    border: 1px solid #fff !important;
+    background:#000 !important;
+}
+
+/* .nb-theme-cosmic nb-menu .menu-item a:hover, .nb-theme-cosmic nb-menu .menu-item a.active{background:linear-gradient(180deg,#00007f,#3123bd,#00007F) !important;} */
+
+
+/* Analytics */
+
+.ag-theme-blue{
+  font-family: 'Exo';
+  color: black;
+}
+
+.ag-theme-blue .ag-header {
+  background: linear-gradient(180deg,#00007f,#3123bd,navy)!important;
+}
+
+.ag-theme-blue .ag-cell-focus{
+    border: 1px solid #00007f;
+}
+
+.ag-theme-blue  .ag-header-cell-label{
+    float: none !important;
+    width: auto !important;
+    justify-content: center;
+}
+.ag-theme-blue .ag-header-cell-menu-button{
+    position: absolute;
+    float: none;
+}
+
+.blue{
+  color: #00007f;
+}
+
+
+.margin-bottom{
+    margin-bottom: 6px;
+  }
+
+/* Analytics END */
+
+.nb-theme-cosmic .custom-control.custom-radio > .custom-control-input:checked ~ .custom-control-indicator::before{
+    background-color: #00007f !important;
+}
+
+.nb-theme-cosmic .custom-control .custom-control-indicator {
+    border-color: #00007f !important;
+}
+
+.card-header{
+    font-size: 14px;
+}
+
+/* .modal-content{ */
+  /* position: center; */
+   /* top: 50%; */
+   /* right: 50%; */
+   /* bottom: 0; */
+   /* left: 0; */
+   /* z-index: 10040; */
+   /* overflow: auto; */
+   /* overflow-y: auto; */
+/* } */
+
+.modal-body{
+	background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("/assets/images/wizly_background.gif");
+	background-size:cover;
+	max-height:500px;
+	overflow-y:auto;
+	
+}
+
+.modal-header{
+	background:linear-gradient(180deg,#00007f,#3123bd,#00007F);
+	/* vertical-align:middle; */
+	/* line-height:5px; */
+}
+
+.modal-footer{
+	background:linear-gradient(180deg,#00007f,#3123bd,#00007F);
+}
+
+.primitive-popover{
+	padding:0.25rem 1rem !important;
+	}

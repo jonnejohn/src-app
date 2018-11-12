@@ -1,0 +1,115 @@
+<div class="header-container"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+  <div class="logo" (click)="goToHome()">Signify<span></span></div>
+  <!-- <iframe src="http://vishal/QPR2017-1/Portal/QPR.Isapi.dll?PGPLUGIN&*10&FMT=p&LAN=en%2c1&MODELID=655625500&OBJECTID=0&ZOOM=fs&VIE=0&SMI=&SCNAME=Dentorex%20Group%20Scorecard&PERIOD=latestforall&DPMODE=0" style="height:1000px;width:1000px;"> </iframe> -->
+</div>
+
+</div>
+<!-- <div class="flex-centered col-sm-12">
+  <h2 class="title">Link for Demo Description</h2>
+  <div class="col-lg-12 col-md-12 col-sm-12">
+  <iframe src="http://vishal/QPR2017-1/Portal/QPR.Isapi.dll?PGPLUGIN&*10&FMT=p&LAN=en%2c1&MODELID=655625500&OBJECTID=0&ZOOM=fs&VIE=0&SMI=&SCNAME=Dentorex%20Group%20Scorecard&PERIOD=latestforall&DPMODE=0" style="height:1000px;width:1000px;"> </iframe>
+</div>
+</div> -->
+<!-- </nb-card-body>
+</nb-card> -->
+<!-- </div>
+</div> -->
+
+<!--  <ngx-theme-switcher></ngx-theme-switcher>
+  <ngx-layout-direction-switcher></ngx-layout-direction-switcher>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<nb-actions
+  size="medium"
+  class="header-container"
+  [class.right]="position === 'normal'"
+  [class.left]="position === 'inverse'">
+  <nb-action icon="nb-gear" class="toggle-layout" (click)="toggleSettings()"></nb-action>
+  
+  <nb-action *nbIsGranted="['view', 'user']" >
+    <nb-user [nbContextMenu]="userMenu" [name]="user?.name" [picture]="user?.picture"></nb-user>
+  
+ 
+
+  
+       
+        
+   <!-- <div> -->
+   <!-- <nb-action class="control-item"> -->
+      <!-- <div class="col-sm-6 input-group-border-only"> -->
+     <!-- <nb-search type="rotate-layout" (click)="open()"></nb-search> -->
+      <!-- <nb-search type="rotate-layout" (click)="open()" (keyup)="keyDownFunction($event)"></nb-search>
+    </div> -->
+    <!-- </nb-action>  -->
+  <!-- </div> -->
+
+</nb-action>
+<nb-action>
+<div>
+    <!-- <nb-action class="control-item"> -->
+      <!-- <input type="text" class="form-control search-text no-radius" style="    height: 32px;
+      width: 125px" placeholder="Search" [(ngModel)]="quickFilterTxt" (ngModelChange)="onFilterChange() ">  -->
+      <!-- <span class="input-group-append margin-right"> -->
+         <button class="btn btn-sm search-label"  (click)="export()" nbPopover="Export to Office" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+            <!-- <i class="fa fa-angle-double-up fa-sm"></i> -->
+            <i class="ace-icon fa fa-upload"></i>
+        </button>
+       
+
+<!-- </span> -->
+<!-- </nb-action> -->
+</div>
+</nb-action>
+
+    
+    <!-- <nb-action class="control-item" disabled icon="nb-notifications"></nb-action>
+  <nb-action class="control-item" icon="nb-email"></nb-action> -->
+ <!-- <nb-action class="control-item"> -->
+    <!-- <nb-action>  
+       <nb-search type="rotate-layout" (click)="open()" (keyup)="keyDownFunction($event)"></nb-search> -->
+      <!-- <div class="col-sm-6 input-group-border-only">
+          <div class="input-group input-group-border-only searchbar">-->
+
+
+      <!-- <input type="text"  class="form-control search-text no-radius" style="    height: 32px;
+      width: 125px" placeholder="Search" [(ngModel)]="quickFilterTxt" (ngModelChange)="onFilterChange() "/> 
+      <!-- <span class="input-group-append margin-right">  -->
+      <!-- <button class="btn btn-sm search-label" (click)="open()" nbPopover="Search" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+          <i class="fa fa-search fa-sm"></i>
+         </button> -->
+        <!-- </nb-action> -->
+
+
+ <!-- <div class="col-sm-6 input-group-border-only">
+    <div class="input-group input-group-border-only searchbar"> -->
+      <!-- <nb-action class="control-item"> -->
+        <!-- <input type="text" class="form-control search-text no-radius" style="    height: 32px;
+      width: 125px" placeholder="Search" [(ngModel)]="quickFilterTxt" (ngModelChange)="onFilterChange() "/> 
+      <span class="input-group-append margin-right">  -->
+          
+      <nb-action>
+        <div>
+          <!-- <nb-action class="control-item"> -->
+             <div class="col-sm-6 input-group-border-only">
+            <!-- <nb-search type="rotate-layout" (click)="open()"></nb-search> -->
+             <nb-search type="rotate-layout" (click)="open()" (keyup)="keyDownFunction($event)"></nb-search>
+           </div>
+           <!-- </nb-action>  -->
+         </div>
+        </nb-action>
+      </nb-actions>
